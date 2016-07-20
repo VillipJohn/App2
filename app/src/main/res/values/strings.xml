@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">App2</string>
+    <string name="text_app_not_available">Приложение App2 не является самостоятельным приложением и будет закрыто через 10 секунд</string>
+</resources>
