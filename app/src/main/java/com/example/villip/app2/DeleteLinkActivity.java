@@ -55,6 +55,8 @@ public class DeleteLinkActivity extends AppCompatActivity {
             if(isOnline()) {
                 isStatus2();
             }
+        } else if (status == 3) {
+            Toast.makeText(this, "Ссылка не корректна, статус не может измениться", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -159,5 +161,7 @@ public class DeleteLinkActivity extends AppCompatActivity {
         cv.put(LinksContract.STATUS, 1);
         Uri uri = ContentUris.withAppendedId(LinksContract.CONTENT_URI, ID);
         int cnt = getContentResolver().update(uri, cv, null, null);
+
+        Toast.makeText(this, "Статус успешно изменился на ЗЕЛЁНЫЙ ", Toast.LENGTH_LONG).show();
     }
 }
